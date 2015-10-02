@@ -14,18 +14,9 @@ h1#head {
     color: rgba(255, 255, 255, 0.75);
     text-shadow: rgba(255, 255, 255, 0.85);
 }
-#background {
-    width: 120%;
-    position: absolute;
-    left: -10%;
-    top: 0;
-    z-index: -1;
-    -webkit-filter: blur(54px);
-    filter: blur(54px);
-    position: fixed;
-}
 body {
-    background: -webkit-gradient(linear, left top, right top, color-stop(0, rgba(0,153,255,0.5)), color-stop(1, rgba(0,153,204,85))) fixed;
+    background: url(background.jpg) no-repeat fixed;
+    background-size: cover;
 }
 
 a {

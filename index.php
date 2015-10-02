@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="index.css"/>
 </head>
 <body>
-    <img id="background" src="./background.jpg" />
     <h1 id="head">作业</h1>
     <?php
         $filename = scandir("./");
