@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    font-family: "Microsoft Yahei", serif;
+}
+html, body {
+    width: 100%;
+    height: 100%;
+}
+h1#head {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.3);
+    color: rgba(255, 255, 255, 0.75);
+    text-shadow: rgba(255, 255, 255, 0.85);
+}
+#background {
+    width: 120%;
+    position: absolute;
+    left: -10%;
+    top: 0;
+    z-index: -1;
+    -webkit-filter: blur(54px);
+    filter: blur(54px);
+    position: fixed;
+}
+body {
+    background: -webkit-gradient(linear, left top, right top, color-stop(0, rgba(0,153,255,0.5)), color-stop(1, rgba(0,153,204,85))) fixed;
+}
+
+a {
+    text-decoration: none;
+    font-size: 30px;
+    color: rgba(255, 255, 255, 0.75);
+    display: inline-block;
+    width: 250px;
+    height: 300px;
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0, rgba(0, 0, 0, 0.1)), color-stop(1, rgba(0, 0, 0, 0.6)));
+
+    margin: 20px;
+    float: left;
+
+    border-radius: 10px;
+
+    text-align: center;
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+a > p {
+    margin-top: 100px;
+}
