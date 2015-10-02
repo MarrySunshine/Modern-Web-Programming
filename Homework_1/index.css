@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Microsoft Yahei", serif;
+}
+html, body {
+    height: 100%;
+    width: 100%;
+}
+body {
+    background: url(http://zurb.com/playground/uploads/upload/upload/87/wood-bg.jpg);
+
+    min-width: 591px;
+    max-width: 1280px;
+}
+h1 {
+    position: absolute;
+    top: 30px;
+    padding-left: 30px;
+
+    font-size: 42px;
+    color: #fff;
+
+    height: 60px;
+    line-height: 60px;
+    width: 70%;
+
+    background-image: -webkit-gradient(linear, left top, right top, color-stop(0, rgba(47,0,0,0.85)), color-stop(1, rgba(47,0,0,0)));
+}
+p {
+    width: 48%;
+    color: #666;
+
+    margin-left: 30px;
+    margin-top: 20px;
+}
+a {
+    text-decoration: none;
+}
+
+.content {
+    height: 40%;
+    text-shadow: 0 0 5px rgba(255,255,255,0.5);
+}
+
+.gallery {
+    height: 60%;
+    width: 100%;
+    margin: 0 auto;
+}
+.gallery > .gallery-item {
+    position: relative;
+
+    display: inline-block;
+
+    width: 268px;
+    height: 286px;
+    background: rgba(149, 129, 98, 0.5);
+    box-shadow: 0 0 8px rgba(0,0,0,0.5);
+
+    margin: 40px 2%;
+    float: left;
+
+    cursor: pointer;
+
+    overflow: hidden;
+}
+.gallery > .gallery-item > .picture {
+    height: 100%;
+    width: 100%;
+
+    vertical-align: bottom;
+
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.gallery > .gallery-item > .name {
+    display: none;
+    color: #ddd;
+}
+
+.gallery > .gallery-item:hover > .picture {
+    height: 90%;
+    width: 90%;
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
+
+    margin-left: 5%;
+}
+.gallery > .gallery-item:hover > .name {
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 30px;
+    text-align: center;
+}
