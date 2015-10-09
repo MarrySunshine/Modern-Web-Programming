@@ -7,13 +7,15 @@
 </head>
 <body>
     <h1 id="head">作业</h1>
+    <div class="dir-container">
     <?php
         $filename = scandir("./");
         for ($i = 0; $i < sizeof($filename); ++$i) {
-            if ($filename[$i][0] != '.') {
-                echo '<a href="' . $filename[$i] . '"><p>' . $filename[$i] . "</p></a><br/>";
+            if (is_dir($filename[$i]) && $filename[$i][0] != '.') {
+                echo '<a href="' . $filename[$i] . '"><p>' . $filename[$i] . "</p></a>";
             }
         }
     ?>
+    </div>
 </body>
 </html>
