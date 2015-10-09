@@ -21,9 +21,8 @@ h1, h2 {
     color: #A4A400;
     background: #F0F0F0;
     text-decoration: underline;
-    letter-spacing: 6px;
+    letter-spacing: 0.2em;
 
-    /*我想把margin设置成0.2em 0，但是和原图差别太大了，所以改成了0.8em 0*/
     margin: 0.8em 0;
 }
 h1 {
