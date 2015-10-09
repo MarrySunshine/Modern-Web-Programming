@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8"/>
     <title>鲁厶维的Modern Web Programming作业</title>
-    <link rel="stylesheet" href="index.css"/>
+    <link rel="stylesheet" href="./index.css"/>
 </head>
 <body>
     <h1 id="head">作业</h1>

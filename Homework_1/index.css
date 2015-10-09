@@ -10,8 +10,6 @@ html, body {
 body {
     background: url(http://zurb.com/playground/uploads/upload/upload/87/wood-bg.jpg);
 
-    min-width: 591px;
-    max-width: 1280px;
 }
 h1 {
     position: absolute;
@@ -45,7 +43,7 @@ a {
 
 .gallery {
     height: 60%;
-    width: 100%;
+    width: 600px;
     margin: 0 auto;
 }
 .gallery > .gallery-item {

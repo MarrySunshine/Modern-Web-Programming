@@ -12,6 +12,10 @@ body {
     background: url(http://courses.cs.washington.edu/courses/cse190m/09sp/homework/1/silverware.jpg) fixed;
 }
 
+.container {
+    margin: 0 0.5em;
+}
+
 h1, h2 {
     font-family: Century Gothic, Futura, Verdana, sans-serif;
     color: #A4A400;
@@ -19,7 +23,8 @@ h1, h2 {
     text-decoration: underline;
     letter-spacing: 6px;
 
-    margin: 0.2em 0;
+    /*我想把margin设置成0.2em 0，但是和原图差别太大了，所以改成了0.8em 0*/
+    margin: 0.8em 0;
 }
 h1 {
     text-align: center;
@@ -30,7 +35,7 @@ h2 {
     font-size: 18pt;
     font-weight: lighter;
 }
-p {
+p, li {
     color: #404040;
     font-size: 11pt;
     font-family: Georgia, Garamond, serif;
@@ -39,6 +44,7 @@ p {
 }
 a {
     color: #A4A400;
+    font-family: Georgia, Garamond, serif;
 }
 
 ul {
@@ -54,10 +60,18 @@ ol {
 .user-comments {
     background: #FFFFC8;
     font-style: italic;
-    margin: 0.2em 3em;
+    margin: 0.8em 3em;
 }
 
 #home {
     display: inline-block;
-    margin-bottom: 0.2em;
+    margin-top: 0.2em;
+    margin-bottom: 0.8em;
+}
+#overview {
+    margin-top: 0.8em;
+}
+
+hr {
+    margin-top: 0.8em;
 }
