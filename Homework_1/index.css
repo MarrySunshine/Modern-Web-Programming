@@ -8,7 +8,7 @@ html, body {
     width: 100%;
 }
 body {
-    background: url(http://zurb.com/playground/uploads/upload/upload/87/wood-bg.jpg);
+    background: url(./wood-bg.jpg);
 
 }
 h1 {
@@ -21,7 +21,9 @@ h1 {
 
     height: 60px;
     line-height: 60px;
-    width: 70%;
+    /*width: 70%;*/
+
+    animation: show-title 1s forwards ease-in-out;
 
     background-image: -webkit-gradient(linear, left top, right top, color-stop(0, rgba(47,0,0,0.85)), color-stop(1, rgba(47,0,0,0)));
 }
@@ -52,7 +54,7 @@ a {
     display: inline-block;
 
     width: 250px;
-    height: 300px;
+    height: 280px;
     background: rgba(149, 129, 98, 0.5);
     box-shadow: 0 0 8px rgba(0,0,0,0.5);
 
@@ -62,6 +64,16 @@ a {
     cursor: pointer;
 
     overflow: hidden;
+    opacity: 0;
+
+    animation: show-gallery 0.6s forwards ease-in-out;
+}
+.gallery > .gallery-item:nth-child(2) {
+    animation-delay: 0.2s;
+}.gallery > .gallery-item:nth-child(3) {
+    animation-delay: 0.4s;
+}.gallery > .gallery-item:nth-child(4) {
+    animation-delay: 0.5s;
 }
 .gallery > .gallery-item > .picture {
     height: 100%;
@@ -69,28 +81,84 @@ a {
 
     vertical-align: bottom;
 
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    -ms-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    transition: all 0.3s;
+    transition: all 0.2s;
 }
 .gallery > .gallery-item > .name {
-    display: none;
-    color: #ddd;
+    display: inline-block;
+    position: absolute;
+    height: 60%;
+    width: 50%;
+
+    top: 20%;
+    left: 30%;
+    background: rgba(255, 255, 255, 0.75);
+    color: #000;
+    z-index: -1;
+
+    opacity: 0;
+
+    font-size: 14px;
 }
 
 .gallery > .gallery-item:hover > .picture {
-    height: 90%;
-    width: 90%;
+    height: 80%;
+    width: 80%;
+    margin-top: 18%;
+    margin-left: 10%;
     box-shadow: 0 0 5px rgba(0,0,0,0.5);
-
-    margin-left: 5%;
 }
 .gallery > .gallery-item:hover > .name {
-    display: block;
     height: 100%;
     width: 100%;
+    top: 0;
+    left: 0;
     line-height: 30px;
     text-align: center;
+    opacity: 0.8;
+    transition: all 0.3s;
+    padding-top: 10px;
+
+    vertical-align: bottom;
+}
+.gallery > .gallery-item:active > .picture {
+    animation: have-fun 0.1s linear 5;
+}
+
+@keyframes show-title {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 70%;
+    }
+}
+
+@keyframes show-gallery {
+    0% {
+        margin-top: -200px;
+        opacity: 0;
+    }
+    90% {
+        margin-top: 10px;
+        opacity: 1;
+    }
+    100% {
+        margin-top: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes have-fun {
+    0% {
+        transform: rotate(0deg);
+    }
+    33% {
+        transform: rotate(-10deg);
+    }
+    66% {
+        transform: rotate(10deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
 }
