@@ -178,3 +178,7 @@ dl#information > dd {
     bottom: 2px;
     right: 0;
 }
+#w3c-test > a {
+    display: block;
+    margin-top: 5px;
+}
