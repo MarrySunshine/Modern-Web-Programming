@@ -1,3 +1,7 @@
+/*create by 鲁厶维 2015-10-15 20:05*/
+/*section A*/
+/*group 11*/
+/*按照设计图完成了布局*/
 * {
     margin: 0;
     padding: 0;
@@ -98,7 +102,7 @@ img {
 }
 
 .reviews-box-section:last-of-type {
-    left: -4px;
+    left: -5px;
 }
 
 .review-item {
@@ -128,10 +132,10 @@ img {
     margin-right: 5px;
 }
 
-.review-content > q {
-    white-space: pre-line;
+/*.review-content > q {*/
+    /*white-space: pre-line;*/
 
-}
+/*}*/
 
 .italic {
     font-style: italic;
@@ -144,7 +148,6 @@ img {
 }
 #pager > span {
     display: inline-block;
-    /*font-family: Arial sans-serif;*/
     margin: 5px auto;
 }
 
