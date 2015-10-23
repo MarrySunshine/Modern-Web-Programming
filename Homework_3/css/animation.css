@@ -66,15 +66,3 @@
 .button.mask:hover::before {
     content: url("../assets/images/mask.png");
 }
-
-@keyframes shake {
-    0% {
-        transform: translate(0, 0);
-    }
-    60% {
-        transform: translate(0, -0.4em);
-    }
-    100% {
-        transform: translate(0, 0);
-    }
-}
