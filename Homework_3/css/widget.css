@@ -1,8 +1,10 @@
 .apb {
-    width: 3em;
-    height: 3em;
-    background: rgba(0, 0, 0, 0.5);
-    border-radius: 1.5em;
+    width: 2.4em;
+    height: 2.4em;
+    background: rgba(48, 63, 159, 0.5);
+    border-radius: 1.2em;
+    z-index: 10!important;
+    transition: transform 0.3s;
 }
 
 .icon {

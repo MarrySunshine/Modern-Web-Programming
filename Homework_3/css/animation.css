@@ -23,8 +23,8 @@
 
 .apb:hover {
     background: rgba(48, 63, 159, 1);
-    transform: translate(0, -0.2em);
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.75);
+    animation: shake-and-scale forwards 0.3s linear;
 }
 
 .apb:hover > .icon {
@@ -86,5 +86,17 @@
     }
     100% {
         transform: rotate(360deg);
+    }
+}
+
+@keyframes shake-and-scale {
+    0% {
+        transform: translate(0, 0) scale(1, 1);
+    }
+    60% {
+        transform: translate(0, -0.4em) scale(1.6, 1.6);
+    }
+    100% {
+        transform: translate(0, 0) scale(1.6, 1.6);
     }
 }
