@@ -1,0 +1,90 @@
+.apb {
+    transition: background-color 0.5s, transform 0.5s;
+}
+
+#info-bar {
+    transition: transform 1s, opacity 0.5s;
+}
+
+#control-ring-container {
+    transition: opacity 0.5s;
+
+}
+
+.button {
+    transition: transform 1s, background-color 1s;
+}
+
+
+
+.button:hover {
+    background: #0099CC;
+}
+
+.apb:hover {
+    background: rgba(48, 63, 159, 1);
+    transform: translate(0, -0.2em);
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.75);
+}
+
+.apb:hover > .icon {
+    background: url("../assets/images/atplus_green.png") no-repeat center;
+}
+
+#button:hover > #info-bar {
+    display: block;
+    opacity: 1;
+    transform: translate(0, -130%);
+}
+
+
+#button:hover > #control-ring-container {
+    display: block;
+    opacity: 1;
+}
+
+#button:hover .mask {
+    transform: translate(-170%, -100%);
+}
+
+#button:hover .history {
+    transform: translate(-220%, 20%);
+}
+
+#button:hover .message {
+    transform: translate(-170%, 140%);
+}
+
+#button:hover .setting {
+    transform: translate(-50%, 200%);
+}
+
+#button:hover .sign {
+    transform: translate(80%, 180%);
+}
+
+.button.mask:hover::before {
+    content: url("../assets/images/mask.png");
+}
+
+.history:hover::before {
+    transform: rotate(180deg);
+}
+
+@keyframes time-rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(90deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    75% {
+        transform: rotate(270deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

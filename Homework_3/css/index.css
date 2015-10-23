@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Microsoft Yahei", sans-serif;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+ul#control-ring > li {
+    position: absolute;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    vertical-align: bottom;
+}
+
+#info-bar,
+#control-ring-container {
+    position: absolute;
+    opacity: 0;
+}
+
+#info-bar {
+    left: -2.5em;
+    transform: scale(0.1 ,0.1);
+}
+
+#at-plus-container {
+    position: absolute;
+    top: 60%;
+    width: 100%;
+}
+
+#bottom-positioner {
+    position: relative;
+}
+
+#button {
+    width: 3em;
+    position: absolute;
+    left: 50%;
+    margin-left: -1.5em;
+}
