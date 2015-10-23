@@ -1,5 +1,6 @@
 .apb {
-    transition: background-color 0.5s, transform 0.5s;
+    transition: transform 0.3s, background-color 0.3s;
+    transition-delay: 0.3s;
 }
 
 #info-bar {
@@ -15,19 +16,18 @@
     transition: transform 1s, background-color 1s;
 }
 
-
-
 .button:hover {
     background: #0099CC;
 }
 
-.apb:hover {
+#button:hover > .apb {
     background: rgba(48, 63, 159, 1);
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.75);
-    animation: shake-and-scale forwards 0.3s linear;
+    transform: scale(1.6, 1.6);
+    transition-delay: 0s!important;
 }
 
-.apb:hover > .icon {
+#button:hover > .apb > .icon {
     background: url("../assets/images/atplus_green.png") no-repeat center;
 }
 
@@ -67,36 +67,14 @@
     content: url("../assets/images/mask.png");
 }
 
-.history:hover::before {
-    transform: rotate(180deg);
-}
-
-@keyframes time-rotate {
+@keyframes shake {
     0% {
-        transform: rotate(0deg);
-    }
-    25% {
-        transform: rotate(90deg);
-    }
-    50% {
-        transform: rotate(180deg);
-    }
-    75% {
-        transform: rotate(270deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
-@keyframes shake-and-scale {
-    0% {
-        transform: translate(0, 0) scale(1, 1);
+        transform: translate(0, 0);
     }
     60% {
-        transform: translate(0, -0.4em) scale(1.6, 1.6);
+        transform: translate(0, -0.4em);
     }
     100% {
-        transform: translate(0, 0) scale(1.6, 1.6);
+        transform: translate(0, 0);
     }
 }
