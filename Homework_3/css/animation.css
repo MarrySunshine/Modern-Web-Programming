@@ -18,11 +18,11 @@
 
 .button:hover {
     background: #0099CC;
+    transform: scale(1, 1);
 }
 
 #button:hover > .apb {
     background: rgba(48, 63, 159, 1);
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.75);
     transform: scale(1.6, 1.6);
     transition-delay: 0s!important;
 }
