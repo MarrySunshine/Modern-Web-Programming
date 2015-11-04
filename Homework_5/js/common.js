@@ -32,7 +32,18 @@ Node.prototype.blinkClass = function(className, time, func) {
     }, time);
 };
 
-HTMLDivElement.prototype.innerText = HTMLDivElement.innerText || HTMLDivElement.textContent;
+//兼容火狐
+Node.prototype.text =
+HTMLDivElement.prototype.text = function(newVal) {
+    if (newVal) {
+        if (this.innerText) {
+            this.innerText = newVal;
+        } else {
+            this.textContent = newVal;
+        }
+    }
+    return (this.innerText || this.textContent);
+};
 
 var queryText = function(selector, text) {
     var items = document.querySelectorAll(selector);

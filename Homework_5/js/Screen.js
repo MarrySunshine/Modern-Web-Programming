@@ -48,17 +48,17 @@ function Screen() {
     this.appendValue = function(val) {
         if (self.isResultShow) {
             if (isNaN(parseInt(val)) && val != "(" && val != ")") {
-                curValObj.innerText += val;
+                curValObj.text(curValObj.text() + val);
             } else {
                 saveLastVal();
-                curValObj.innerText = val;
+                curValObj.text(val);
             }
             self.isResultShow = false;
         } else {
-            if (curValObj.innerText !== "0") {
-                curValObj.innerText += val;
+            if (curValObj.text() !== "0") {
+                curValObj.text(curValObj.text() + val);
             } else {
-                curValObj.innerText = val;
+                curValObj.text(val);
             }
         }
     };
@@ -66,23 +66,23 @@ function Screen() {
     this.removeValue = function() {
         if (self.isResultShow) {
             saveLastVal();
-            curValObj.innerText = "0";
+            curValObj.text("0");
             self.isResultShow = false;
         } else {
-            if (curValObj.innerText.length != 1) {
-                curValObj.innerText = curValObj.innerText.substring(0, curValObj.innerText.length - 1);
+            if (curValObj.text().length != 1) {
+                curValObj.text(curValObj.text().substring(0, curValObj.text().length - 1));
             } else {
-                curValObj.innerText = "0";
+                curValObj.text("0");
             }
         }
     };
 
     this.clean = function() {
         setTimeout(function() {
-            if (curValObj.innerText !== "0" && self.isResultShow) {
+            if (curValObj.text() !== "0" && self.isResultShow) {
                 saveLastVal();
             }
-            curValObj.innerText = "0";
+            curValObj.text("0");
             self.isResultShow = false;
         }, 200);
 
@@ -91,7 +91,7 @@ function Screen() {
 
     this.getResult = function() {
         try {
-            curValObj.innerText = eval(curValObj.innerText);
+            curValObj.text(eval(curValObj.text()));
             self.isResultShow = true;
         } catch(e) {
             if (!confirm("式子写错了,我先问你个问题,我帅不?")) {
@@ -103,12 +103,12 @@ function Screen() {
     this.useLastVal = function() {
         lastValContainer.blinkClass("move-down", 400);
         curValContainer.blinkClass("move-down", 400, function() {
-            curValObj.innerText = lastValObj.innerText;
+            curValObj.text(lastValObj.text());
             self.isResultShow = false;
             if (!self.values.empty()) {
-                lastValObj.innerText = self.values.pop();
+                lastValObj.text(self.values.pop());
             } else {
-                lastValObj.innerText = "0";
+                lastValObj.text("0");
             }
         });
     };
@@ -120,9 +120,9 @@ function Screen() {
     //private method
 
     var saveLastVal = function() {
-        if (lastValObj.innerText !== "0") {
-            self.values.push(lastValObj.innerText);
+        if (lastValObj.text() !== "0") {
+            self.values.push(lastValObj.text());
         }
-        lastValObj.innerText = curValObj.innerText;
+        lastValObj.text(curValObj.text());
     };
 }

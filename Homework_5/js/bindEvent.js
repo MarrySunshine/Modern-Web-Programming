@@ -87,11 +87,11 @@ function KeyDownEvent(e) {
 }
 
 function displayBtnClicked(e) {
-    screen.appendValue(e.target.innerText);
+    screen.appendValue(this.text());
 }
 
 function noDisplayBtnClicked(e) {
-    switch (e.target.innerText) {
+    switch (this.text()) {
         case "←":
             screen.removeValue();
             break;
