@@ -66,3 +66,11 @@ var showAlert = function(content) {
         alertBox.removeClass("top");
     });
 };
+
+var sqrt = function(expression) {
+    try {
+        return Math.sqrt(eval(expression))
+    } catch(e) {
+        return false;
+    }
+};

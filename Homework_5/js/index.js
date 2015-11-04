@@ -5,4 +5,5 @@ window.onload = function() {
     screen.init();
     bindClickEvent();
     bindKeyDownEvent();
+    showAlert("支持键盘操作");
 };
