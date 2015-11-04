@@ -48,9 +48,7 @@ function Screen() {
     this.appendValue = function(val) {
         if (self.isResultShow) {
             if (isNaN(parseInt(val)) && val != "(" && val != ")") {
-                textMove("left", function() {
-                    curValObj.innerText += val;
-                });
+                curValObj.innerText += val;
             } else {
                 saveLastVal();
                 curValObj.innerText = val;
@@ -58,9 +56,7 @@ function Screen() {
             self.isResultShow = false;
         } else {
             if (curValObj.innerText !== "0") {
-                textMove("left", function() {
-                    curValObj.innerText += val;
-                });
+                curValObj.innerText += val;
             } else {
                 curValObj.innerText = val;
             }
@@ -74,9 +70,7 @@ function Screen() {
             self.isResultShow = false;
         } else {
             if (curValObj.innerText.length != 1) {
-                textMove("right", function() {
-                    curValObj.innerText = curValObj.innerText.substring(0, curValObj.innerText.length - 1);
-                });
+                curValObj.innerText = curValObj.innerText.substring(0, curValObj.innerText.length - 1);
             } else {
                 curValObj.innerText = "0";
             }
@@ -90,9 +84,9 @@ function Screen() {
             }
             curValObj.innerText = "0";
             self.isResultShow = false;
-        }, 300);
+        }, 200);
 
-        screenObj.blinkClass("clear-screen", 600);
+        screenObj.blinkClass("clear-screen", 400);
     };
 
     this.getResult = function() {
@@ -130,9 +124,5 @@ function Screen() {
             self.values.push(lastValObj.innerText);
         }
         lastValObj.innerText = curValObj.innerText;
-    };
-
-    var textMove = function (director, then) {
-        curValContainer.blinkClass("move-" + director, 200, then);
     };
 }
