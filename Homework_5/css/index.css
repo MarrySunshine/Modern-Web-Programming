@@ -73,3 +73,26 @@ html, body {
     vertical-align: middle;
     margin-top: 0.2em;
 }
+
+#alert-box {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.65);
+    font-size: 2em;
+    height: 1.6em;
+    line-height: 1.6em;
+    width: 40%;
+    bottom: 10%;
+    left: 30%;
+    text-align: center;
+    color: white;
+    border-radius: 0.4em;
+    opacity: 0;
+    transition: opacity 0.4s;
+}
+
+#alert-box.active {
+    opacity: 1;
+}
+#alert-box.top {
+    z-index: 1;
+}

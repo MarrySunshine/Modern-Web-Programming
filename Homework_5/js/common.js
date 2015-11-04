@@ -25,8 +25,11 @@ Node.prototype.hasClass = function(className) {
 
 Node.prototype.blinkClass = function(className, time, func) {
     var self = this;
+    if (this.hasClass(className)) {
+        clearInterval(this.st);
+    }
     this.addClass(className);
-    var st = setTimeout(function () {
+    this.st = setTimeout(function () {
         self.removeClass(className);
         if (func) func();
     }, time);
@@ -53,4 +56,13 @@ var queryText = function(selector, text) {
         }
     }
     return null;
+};
+
+var showAlert = function(content) {
+    var alertBox = document.getElementById("alert-box");
+    alertBox.text(content);
+    alertBox.addClass("top");
+    alertBox.blinkClass("active", 1000, function() {
+        alertBox.removeClass("top");
+    });
 };

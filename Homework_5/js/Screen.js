@@ -115,6 +115,7 @@ function Screen() {
 
     this.changeTheme = function(type) {
         self.themeNode.href = "css/" + type + ".css";
+        showAlert(type);
     };
 
     //private method
