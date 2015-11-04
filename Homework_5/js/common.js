@@ -32,7 +32,7 @@ Node.prototype.blinkClass = function(className, time, func) {
     }, time);
 };
 
-Node.prototype.innerText = Node.innerText || Node.contentText;
+Node.prototype.innerText = Node.prototype.innerText || Node.prototype.textContent;
 
 var queryText = function(selector, text) {
     var items = document.querySelectorAll(selector);
