@@ -1,0 +1,23 @@
+#screen {
+    background: white;
+}
+
+#btn-section {
+    background: black;
+}
+
+#btn-section > .btn-group > .btn-item {
+    background: white;
+}
+
+@keyframes clear-screen {
+    0% {
+        background: white;
+    }
+    50% {
+        background: black;
+    }
+    100% {
+        background: white;
+    }
+}

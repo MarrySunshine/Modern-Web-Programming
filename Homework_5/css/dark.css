@@ -1,0 +1,26 @@
+* {
+    color: rgba(255, 255, 255, 0.75);
+}
+#screen {
+    background: #222222;
+}
+
+#btn-section {
+    background: white;
+}
+
+#btn-section > .btn-group > .btn-item {
+    background: #333333;
+}
+
+@keyframes clear-screen {
+    0% {
+        background: #222222;
+    }
+    50% {
+        background: white;
+    }
+    100% {
+        background: #222222;
+    }
+}
