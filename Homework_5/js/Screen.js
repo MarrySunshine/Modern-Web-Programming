@@ -26,17 +26,17 @@ function Screen() {
 
     this.init = function() {
 
-        screenObj = document.getElementById("screen");
+        screenObj = $("#screen");
 
-        lastValContainer = document.getElementById("last-value");
+        lastValContainer = $("#last-value");
 
         lastValObj = lastValContainer.childNodes[0];
 
-        curValContainer = document.getElementById("current-value");
+        curValContainer = $("#current-value");
 
         curValObj = curValContainer.childNodes[0];
 
-        var head = document.getElementsByTagName("head")[0];
+        var head = $("head");
         for (var i in head.childNodes) {
             if (head.childNodes[i].nodeName == "#text") continue;
             if (head.childNodes[i].getAttribute("tag") == "theme") break;

@@ -1,26 +1,20 @@
 function bindClickEvent() {
-    var items = document.getElementsByClassName("btn-item display-on-screen");
-    for (var i in items) {
-        items[i].onclick = displayBtnClicked;
-    }
-    items = document.getElementsByClassName("btn-item no-display");
-    for (i in items) {
-        items[i].onclick = noDisplayBtnClicked;
-    }
+    $(".btn-item.display-on-screen").on("click", displayBtnClicked);
+    $(".btn-item.no-display").on("click", noDisplayBtnClicked);
 }
 
 function bindKeyDownEvent() {
-    document.body.onkeydown = KeyDownEvent;
+    $("body").on("keydown", KeyDownEvent);
 }
 
 function KeyDownEvent(e) {
     var item = null;
-    console.log(e);
     switch (e.keyCode) {
         case 13:
             item = queryText(".btn-item.no-display", "=");
             break;
         case 8:
+        case 37:
             item = queryText(".btn-item.no-display", "←");
             break;
         case 38:
@@ -81,7 +75,7 @@ function KeyDownEvent(e) {
     }
 
     if (item) {
-        item.onclick({target: item});
+        item.trigger("click");
         item.blinkClass("active", 100);
     }
 }
