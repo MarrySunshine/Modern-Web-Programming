@@ -91,7 +91,7 @@ function Screen() {
 
     this.getResult = function() {
         try {
-            curValObj.text(eval(curValObj.text()));
+            curValObj.text(parseFloat(eval(curValObj.text()).toFixed(8)));
             self.isResultShow = true;
         } catch(e) {
             if (!confirm("式子写错了,我先问你个问题,我帅不?")) {
