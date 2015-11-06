@@ -73,7 +73,7 @@ Node.prototype.trigger = function(event, data) {
 var queryText = function(selector, text) {
     var items = $(selector);
     for (var i in items) {
-        if (items[i].innerText == text) {
+        if (items[i].text() == text) {
             return items[i];
         }
     }
