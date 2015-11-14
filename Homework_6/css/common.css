@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+#alert-box {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.65);
+    font-size: 2em;
+    height: 1.6em;
+    line-height: 1.6em;
+    width: 60%;
+    bottom: 10%;
+    left: 20%;
+    text-align: center;
+    color: white;
+    border-radius: 0.4em;
+    opacity: 0;
+    transition: opacity 0.4s;
+}
+
+#alert-box.active {
+    opacity: 1;
+}
+#alert-box.top {
+    z-index: 1;
+}

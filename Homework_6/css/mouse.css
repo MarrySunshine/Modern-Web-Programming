@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family:"Century Gothic", Futura, Verdana;
+    font-size: 12pt;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+h1 {
+    margin: 20px 0;
+    font-size: 20pt;
+}
+
+h2 {
+    font-size: 12pt;
+    font-weight: normal;
+}
+
+#info {
+    text-align: center;
+}
+
+ul {
+    display: inline-block;
+    list-style: none;
+}
+
+ul input {
+    margin-top: 5px;
+}
+
+.control-col {
+    margin-right: 30px;
+    text-align: left;
+}
+
+.control-col button {
+    padding: 0 8px;
+    font-size: 8pt;
+}
+
+.control-col input {
+    width: 120px;
+    font-size: 10pt;
+    text-align: left;
+}
+
+.state-col {
+    width: 90px;
+    text-align: right;
+}
+
+.state-col input {
+    width: 30px;
+    font-size: 10pt;
+}
+
+#game-box {
+    clear: both;
+    margin: 40px auto;
+    padding: 10px 0;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+    width: 235px;
+}
+
+dl {
+    margin: 0 auto;
+    width: 670px;
+}
+
+dt {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.mole-style {
+    margin: 4px 4px;
+    width: 15px;
+    height: 15px;
+    color: white;
+}

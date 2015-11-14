@@ -1,0 +1,36 @@
+#container {
+    height: 340px;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    margin-top: -170px;
+    text-align: center;
+}
+
+iframe {
+    height: 300px;
+    width: 400px;
+    display: inline-block;
+    border: 20px solid gray;
+    transition: all 0.3s;
+    background-color: #fff;
+}
+
+iframe:nth-of-type(1).active {
+    transform: scale(1.5);
+    z-index: 2;
+}
+iframe:nth-of-type(2).active {
+    transform: scale(1.5);
+    z-index: 2;
+}
+
+iframe:nth-of-type(1).blur {
+    transform: rotateY(80deg) skewY(-10deg);
+    z-index: 2;
+}
+
+iframe:nth-of-type(2).blur {
+    transform: rotateY(80deg) skewY(10deg);
+    z-index: 2;
+}
