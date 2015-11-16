@@ -1,0 +1,28 @@
+#ball-div {
+    position: relative;
+    width: 60%;
+    height: 60vw;
+    margin: 20px auto 0;
+}
+
+#ball-div span {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    font-family: Microsoft YaHei;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 3px 6px;
+}
+
+p {
+    font: 16px Microsoft YaHei;
+    text-align: center;
+    color: #ba0c0c;
+}
+
+p span {
+    font-size: 14px;
+    color: #ba0c0c;
+}
