@@ -10,18 +10,24 @@ function CanvasManager() {
     this.init = function() {
         canvasObj = $("#canvas");
         context = canvasObj.getContext("2d");
-        canvasObj.width = window.innerWidth * 0.8;
-        canvasObj.height = window.innerHeight * 0.8;
+        canvasObj.width = window.innerWidth;
+        canvasObj.height = window.innerHeight;
+
+        var image = new Image();
+        image.src = "background.jpg";
+        image.on("load", function() {
+            context.drawImage(this, 0, 0, canvasObj.width, canvasObj.height);
+        });
+
     };
 
     this.drawPoint = function(x, y) {
         this.lastX = this.lastX || x;
         this.lastY = this.lastY || y;
         context.beginPath();
-        context.moveTo(this.lastX, this.lastY);
-        context.lineTo(x, y);
-        context.stroke();
-        context.closePath();
+        context.arc(x, y, 100, 0, 360);
+        context.fillStyle = "white";
+        context.fill();
         this.lastX = x;
         this.lastY = y;
     };
