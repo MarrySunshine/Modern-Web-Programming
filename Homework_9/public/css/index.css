@@ -35,7 +35,7 @@ body {
 
 .group {
     text-align: right;
-    margin-right: 10%;
+    margin-right: 15%;
     margin-top: 7%;
 }
 
@@ -51,6 +51,7 @@ body {
     border: none;
     border-bottom: 2px dashed #aaa;
     padding-left: 5px;
+    width: 50%;
 }
 
 #regist-box input[type='text'].error {
